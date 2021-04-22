@@ -140,7 +140,7 @@ writeAt position text = do
 showCity :: City -> IO ()
 showCity (n, (north, east), p)  = writeAt r ("+" ++ n ++ " " ++ show (head p))
     where
-        r = (( east `div` 80), ( north `div` 50))
+        r = (( north `div` 50), ( east `div` 80))
 
 mapper :: IO ()
 mapper = do 
